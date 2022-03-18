@@ -18,6 +18,8 @@ app.get('/', (request, response) => {
 app.get('/squads', db.getSquads)
 app.get('/squads/:id', db.getSquadById)
 app.post('/squads', db.createSquad)
+app.put('/squads/:id', db.updateSquad)
+app.delete('/squads/:id', db.deleteSquad)
 
 app.listen(port, () => {
   console.log(`App running on port ${port}.`)
